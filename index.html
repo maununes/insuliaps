@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <link rel="icon" href="img/favicon.png" />
+  <title>InsulinAPS</title>
+  
+  <meta name="keywords" content="saúde">
+  <meta name="description" content="Todas informações para o cuidado integral dos insulinodependentes de sua UBS na palma da sua mão">
+
+  <meta itemprop="name" content="InsulinAPS">
+  <meta itemprop="description" content="Todas informações para o cuidado integral dos insulinodependentes de sua UBS na palma da sua mão">
+  <meta itemprop="image" content="https://jetbiz.com.br/site/insulinaps/img/touch/72.png">
+  
+  <meta name="twitter:card" content="product">
+  <meta name="twitter:site" content="InsulinAPS">
+  <meta name="twitter:title" content="InsulinAPS">
+  <meta name="twitter:description" content="Todas informações para o cuidado integral dos insulinodependentes de sua UBS na palma da sua mão">
+  <meta name="twitter:creator" content="InsulinAPS">
+  <meta name="twitter:image" content="https://jetbiz.com.br/site/insulinaps/img/touch/72.png">
+
+  <meta property="og:title" content="InsulinAPS" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://jetbiz.com.br/site/insulinaps" />
+  <meta property="og:image" content="https://jetbiz.com.br/site/insulinaps/img/touch/72.png" />
+  <meta property="og:description" content="Todas informações para o cuidado integral dos insulinodependentes de sua UBS na palma da sua mão" />
+  <meta property="og:site_name" content="InsulinAPS" />
+
+
+  <!-- CSS  -->
+  <link href="css/icon.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+      function clickmenu(link,hide){
+        $('#page-entrar').hide();
+        var url = 'loading.html';
+        $('#page-main').hide();
+        $('#page-frame').show();
+        
+        if (link == 'cadastro'){
+          url = 'https://docs.google.com/spreadsheets/d/1URAZsj6sAwhE__rFGGn67EDnD95IyDNPakEFT3Xa_0k/';
+          $('#iframe').attr('src',url);
+        }
+        
+        if (link == 'pesquisa'){
+          url = 'https://datastudio.google.com/embed/reporting/9ff4a5f3-1b80-44fb-8432-9ece03f1b587/page/NcN8B';
+          $('#iframe').attr('src',url);
+        }
+        
+        if (link == 'dispensa'){
+          url = 'https://docs.google.com/spreadsheets/d/1jlhjhefzzlaMHzLCoDLTN-u_2Idfr2GxwnTS7SG4lb4/';
+          $('#iframe').attr('src',url);
+        }
+        
+        if (link == 'relatorio'){
+          url = 'https://datastudio.google.com/embed/reporting/9ff4a5f3-1b80-44fb-8432-9ece03f1b587/page/mBO8B';
+          $('#iframe').attr('src',url);
+        }
+        
+        if (link == 'calculadora'){
+          url = 'calculadora.html';
+          $('#iframe').attr('src',url);
+        }
+        
+        if (link == 'inicio'){
+          url = 'loading.html';
+          $('#page-main').show();
+          $('#page-frame').hide();
+          $('#iframe').attr('src',url);
+        }
+      
+        if(hide) {$(".navbar-toggler").click();}
+      }
+    </script>
+    <link href="manifest.webmanifest"  rel="manifest"/>
+</head>
+<body style="background:#e6eeff;margin: 0;" >
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!--  Scripts-->
+    <script src="js/init.js"></script>
+    <header style="padding-top:70px;">
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background:#000080">
+        <a class="navbar-brand" href="#" onclick="clickmenu('inicio')">
+        <img src="img/logo1.png" style="width:40px;">
+        InsulinAPS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio" id="menu-cadastro" onclick="clickmenu('inicio',true)">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cadastro" id="menu-cadastro" onclick="clickmenu('cadastro',true)">Cadastro de Pacientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pesquisa" id="menu-cadastro" onclick="clickmenu('pesquisa',true)">Pesquisa de Pacientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#dispensa" id="menu-dispensa" onclick="clickmenu('dispensa',true)">Dispensa Mensal de Insulina</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#relatorio" id="menu-dispensa" onclick="clickmenu('relatorio',true)">Relatórios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#calculadora" id="menu-dispensa" onclick="clickmenu('calculadora',true)">Calculadora de Dispensa de NPH</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main id="page-entrar" role="main" class="container text-center" style="max-width:420px;">
+      <div class="row">
+        <div class="col-12">
+          <h1 style="color:#000080"><img src="img/logo1.png" style="margin:0 auto;"><br> InsulinAPS</h1>
+          <br>
+          <p>Todas informações para o cuidado integral dos insulinodependentes de sua UBS na palma da sua mão.</p>
+          <br>
+          <button class="btn btn-primary form-control" onclick="$('#page-entrar').hide();$('#page-main').show()">Entrar</button>
+        </div>
+      </div>
+    </main>
+    
+    <main id="page-main" role="main" class="container text-center" style="max-width:400px;display:none;">
+      <div class="row">
+        <div class="col-12">
+          <h4><img src="img/sus.png" style="height:30px;margin:0 auto;"> UBS Mangueirão</h4>
+        </div>
+      </div>
+      
+      
+      <div class="row text-center">
+        <div class="col-6 text-center">
+        <a href="#cadastro" style="padding:10px;" onclick="clickmenu('cadastro')">
+          <div class="card text-center align-item-center" style="width: 10rem;height:10rem;margin:0 auto;box-shadow: 5px 10px;">
+            <img class="card-img-top" src="img/cadastro.JPG" style="width:40px;margin:0 auto;padding-top:25px">
+            <div class="card-body">
+              <p class="card-text">Cadastro de Pacientes</p>
+            </div>
+          </div>
+        </a>
+        </div>
+        <div class="col-6">
+        <a href="#pesquisa" style="padding:10px;" onclick="clickmenu('pesquisa')">
+          <div class="card text-center align-item-center" style="width: 10rem;height:10rem;margin:0 auto;box-shadow: 5px 10px;">
+            <img class="card-img-top" src="img/pesquisa.JPG" style="width:60px;margin:0 auto;padding-top:30px">
+            <div class="card-body">
+              <p class="card-text">Pesquisa de Pacientes</p>
+            </div>
+          </div>
+        </a>
+        </div>
+        
+        <div class="col-6 text-center" >
+        <a href="#dispensa" style="padding:10px;" onclick="clickmenu('dispensa')">
+          <div class="card text-center align-item-center" style="width: 10rem;height:10rem;margin:0 auto;box-shadow: 5px 10px;">
+            <img class="card-img-top" src="img/dispensa.JPG" style="width:60px;margin:0 auto;padding-top:20px">
+            <div class="card-body">
+              <p class="card-text">Dispensa de Insulina Mensal</p>
+            </div>
+          </div>
+        </a>
+        </div>
+        <div class="col-6 text-center">
+        <a href="#relatorio" style="padding:10px;" onclick="clickmenu('relatorio')">
+          <div class="card text-center align-item-center" style="width: 10rem;height:10rem;margin:0 auto;box-shadow: 5px 10px;">
+            <img class="card-img-top" src="img/relatorio.JPG" style="width:60px;margin:0 auto;padding-top:20px">
+            <div class="card-body">
+              <p class="card-text">Relatórios</p>
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+      
+      <div class="row text-center">
+        <div class="col-12 text-center">
+        <a href="#calculadora" style="padding:10px;" onclick="clickmenu('calculadora')">
+          <div class="card text-center align-item-center" style="width: 20rem;height:7rem;margin:0 auto;box-shadow: 5px 10px;">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <img src="img/calculadora.JPG" style="width:40px;margin:0 auto;">
+                </div>
+                
+                <div class="col-8">
+                  <p >Calculadora de Dispensa de Insulina NPH Mensal</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+      
+    </main>
+    
+    <main id="page-frame" role="main" class="container text-center" style="display: none;padding: 0;margin: 0;">
+      <div class="row">
+        <div class="col-12">
+          <h4><img src="img/sus.png" style="height:30px;margin:0 auto;"> UBS Mangueirão</h4>
+        </div>
+      </div>
+      <iframe id="iframe" style="border: none;height: 100vh;width: 100vw;border:0" src="loading.html" frameborder="0" allowfullscreen>
+    </main>
+    
+    
+    
+    
+</body>
+</html>

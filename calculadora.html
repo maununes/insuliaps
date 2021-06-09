@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <!-- CSS  -->
+  <link href="css/icon.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body style="background:#e6eeff;">
+    <hr>
+    <!-- Begin page content -->
+    <main role="main" class="container text-center" style="">
+      <h4>Calculadora de Dispensa de Insulina NPH Mensal</h4>
+      <b>Informe a Posologia NPH Mensal</b><br>
+      <div class="row">
+        <div class="col">
+          Manhã:<input onkeyup="calcular()" class="form-control" type="number" id="posologia-m">
+        </div>
+        <div class="col">
+          Tarde:<input onkeyup="calcular()" class="form-control" type="number" id="posologia-t">
+        </div>
+        <div class="col">
+          Noite:<input onkeyup="calcular()" class="form-control" type="number" id="posologia-n">
+        </div>
+      </div>
+      <br><br>
+      <b>Quantidade de frascos OU canetas por mês de NPH</b><br>
+      <div class="row">
+        <div class="col">
+          <h5>Frascos</h5>
+          <h3 id="frascos">0</h3>
+        </div>
+        <div class="col">
+          <h5>Canetas</h5>
+          <h3 id="canetas">0</h3>
+        </div>
+      </div>
+      <hr>
+      
+      
+    </main>
+    <br>
+    <footer class="footer">
+      <div class="container">
+        <h5 class="white-text" id="como-usar">Como Usar</h5>
+          <p class="grey-text text-lighten-4">Informe a posologia mensal por turno e veja quantos frascos ou canetas representam.</p>
+      </div>
+    </footer>
+    <script>
+      $('#posologia-m').val(0);
+      $('#posologia-t').val(0);
+      $('#posologia-n').val(0);
+      function calcular(){
+        var m = $('#posologia-m').val() ? parseInt($('#posologia-m').val()) : 0;
+        var t = $('#posologia-t').val() ? parseInt($('#posologia-t').val()) : 0;
+        var n = $('#posologia-n').val() ? parseInt($('#posologia-n').val()) : 0;
+        
+        var frascos = Math.ceil(((m+t+n)*30)/1000);
+        var canetas = Math.ceil(((m+t+n)*30)/300);
+        $('#frascos').html(frascos);
+        $('#canetas').html(canetas);
+      }
+    </script>
+</body>
+</html>
